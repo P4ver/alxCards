@@ -9,10 +9,11 @@ app.use(cookieParser());
 
 const users = require('./routes/userRoutes')
 const auth = require('./routes/authRoute')
-
+const cards = require('./routes/cardRoutes')
 
 app.use('/', users)
 app.use('/', auth)
+app.use('/', cards)
 // app.get('/', (req, res) => {
 //     res.send('Hello World!')
 // })
