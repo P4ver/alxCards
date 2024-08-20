@@ -2,10 +2,20 @@ const express = require('express');
 const app = express()
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
+
 const port = 3000
 
 app.use(bodyParser.json())
 app.use(cookieParser());
+
+app.use(cors(
+    {
+      origin: 'http://localhost:5173',
+      credentials: true,
+    }
+  ));
+  
 
 const users = require('./routes/userRoutes')
 const auth = require('./routes/authRoute')
