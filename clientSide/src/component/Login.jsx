@@ -12,7 +12,11 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:3000/login', { name, password });
-            localStorage.setItem('token', response.data.token);
+            // localStorage.setItem('token:', response);
+            const jsonObject = JSON.parse(response.config.data);
+            localStorage.setItem('username', jsonObject.name);
+            console.log('res.data', jsonObject.name);
+
             setMessage(response.data.message);
             if (response.data.message === 'Logged in successfully') {
                 navigate('/home'); // Redirect to the home page
