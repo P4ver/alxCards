@@ -77,7 +77,7 @@ const login = (req, res) => {
             }
 
             const token = jwt.sign({ login_User }, 'my_secret', { expiresIn: '1d' });
-            res.cookie('jwt', token, { httpOnly: true, maxAge: 86400000 });
+            res.cookie('jwt', token, { httpOnly: true, maxAge: 86400000, secure: false });
             res.json({ message: 'Logged in successfully' });
         });
     });
