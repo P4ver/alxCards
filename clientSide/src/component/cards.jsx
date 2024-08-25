@@ -197,12 +197,6 @@ const handleClosePopup = () => {
 };
 
 
-const defaultImage = 'path/to/default/image.jpg'; // Replace with the path to your default image
-
-const renderImage = (imagePath) => {
-  return imagePath ? imagePath : defaultImage;
-};
-
   return (
       <div className="p-4 relative">
           <div className='flex justify-between items-center my-10 border rounded-md '>
@@ -213,19 +207,6 @@ const renderImage = (imagePath) => {
                 Add a New Card
             </button>
           </div>
-          {/* fetching cards */}
-          {/* <div class="relative flex items-center justify-center h-auto ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-              {cardsUser.map(card => (
-                <>
-                    <FlashCard 
-                        text1={card.text1}
-                        text2={card.text2}
-                    />
-                </>    
-                ))}
-            </div>
-          </div> */}
         {/* fetching and updating cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {cardsUser.map(card => (
