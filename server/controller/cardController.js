@@ -64,9 +64,25 @@ const updateCards = (req, res)=>{
                 res.send(rows);
             })
         })
-
 }
 
+const deleteCards = (req, res) => {
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+        
+        connection.query('DELETE FROM flashcards WHERE id=?', [req.params.id], (err, rows) => {
+            connection.release();
+
+            if (err) throw err;
+
+            if (rows.affectedRows === 0) {
+                return res.status(404).json({ message: 'Card not found' });
+            }
+
+            res.json({ message: 'Card deleted successfully' });
+        });
+    });
+};
 
 // const addCards = (req, res)=>{
 //     pool.getConnection((err, connection)=>{
@@ -79,4 +95,4 @@ const updateCards = (req, res)=>{
 //     })
 // }
 
-module.exports = {getCards, addCards, getCardsById, updateCards};
+module.exports = {getCards, addCards, getCardsById, updateCards, deleteCards};
