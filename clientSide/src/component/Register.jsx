@@ -25,7 +25,10 @@ const Register = () => {
             }
         }
     };
-
+    
+    const handleLogin = () => {
+        navigate('/login'); // Redirect to the register page
+    }
     return (
         <div className="flex justify-center items-center h-screen">
             <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-80">
@@ -52,6 +55,16 @@ const Register = () => {
                 </div>
                 {message && <p className="text-red-500 mb-4">{message}</p>}
                 <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Register</button>
+                <div className='text-center pt-11'>
+                Already Register?
+                <a 
+                    type="button" 
+                    onClick={handleLogin} 
+                    className="w-full text-blue-800 p-2 font-medium cursor-pointer"
+                    >
+                    connect Now
+                </a>
+            </div>
             </form>
         </div>
     );
