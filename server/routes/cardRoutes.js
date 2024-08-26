@@ -25,7 +25,6 @@ const upload = multer({ storage: storage });
 router.get('/cards', verifyToken, getCards)
 router.get('/cards/:id', verifyToken, getCardsById)
 router.put('/cards/:id', verifyToken, updateCards)
-// router.post('/cards', verifyToken, addCards)
 router.delete('/cards/:id', verifyToken, deleteCards);
 router.post('/cards', verifyToken, upload.single('image'), addCards);
 

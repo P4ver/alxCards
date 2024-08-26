@@ -24,18 +24,11 @@ const Navbar = () => {
                     </div>
                     <div className="hidden w-full lg:flex lg:pl-11 " id="navbar-default-example">
                         <ul className="flex items-center flex-col mt-4 lg:mt-0 lg:ml-auto lg:flex-row gap-4">
-                            {/* <li>
-                                <a className="flex items-center justify-between text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3">
-                                    Home
-                                </a>
-                            </li> */}
                             <li className='border px-4 py-1 rounded-md'>
                                 User : {name}
                             </li>
                             <li>
-                                {/* <a className="flex items-center justify-between text-gray-500 text-sm lg:text-base font-medium hover:text-indigo-700 transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3"> */}
-                                    <Logout/>
-                                {/* </a> */}
+                                <Logout/>
                             </li>
                         </ul>
                     </div>

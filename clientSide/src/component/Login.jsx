@@ -21,7 +21,7 @@ const Login = () => {
 
             setMessage(response.data.message);
             if (response.data.message === 'Logged in successfully') {
-                navigate('/home'); // Redirect to the home page
+                navigate('/cards'); // Redirect to the home page
             }
         } catch (error) {
             if (error.response && error.response.status === 401) {
