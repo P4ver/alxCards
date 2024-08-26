@@ -15,17 +15,17 @@ const Navbar = () => {
     <div>
         <nav className="fixed top-0 border-solid border-gray-200 w-full border-b py-3 bg-white z-50">
             <div className="container mx-auto ">
-                <div className="w-full flex  flex-col lg:flex-row">
+                <div className="w-full flex px-20">
 
-                    <div className=" flex justify-between  lg:flex-row">
-                        <a href="#" className="flex items-center">
+                    <div className=" flex text justify-between lg:flex-row">
+                        <a href="/" className="flex items-center">
                             ALXCARDS
                         </a>
                     </div>
                     <div className="hidden w-full lg:flex lg:pl-11 " id="navbar-default-example">
                         <ul className="flex items-center flex-col mt-4 lg:mt-0 lg:ml-auto lg:flex-row gap-4">
-                            <li className='border px-4 py-1 rounded-md'>
-                                User : {name}
+                            <li className='border px-4 py-2 rounded-md w-52 flex justify-around'>
+                                Welcome Back<span className='font-semibold uppercase'>{name}</span>
                             </li>
                             <li>
                                 <Logout/>
