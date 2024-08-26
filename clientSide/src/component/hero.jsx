@@ -5,17 +5,17 @@ function Hero() {
     return (
         <div>
             
-            <div class=" h-screen">
+            <div class=" ">
             <nav className="fixed top-0 border-solid border-gray-200 w-full border-b py-3 bg-white z-50">
             <div className="container mx-auto ">
                 <div className="w-full flex  flex-col lg:flex-row">
 
-                    <div className=" flex justify-between  lg:flex-row">
+                    <div className=" flex justify-between lg:flex-row">
                         <a href="#" className="flex items-center">
                             ALXCARDS
                         </a>
                     </div>
-                    <div className="hidden w-full lg:flex lg:pl-11 " id="navbar-default-example">
+                    <div className="hidden w-full lg:flex lg:pl-11" id="navbar-default-example">
                         <ul className="flex items-center flex-col mt-4 lg:mt-0 lg:ml-auto lg:flex-row gap-4">
                             <li className='text-center'>
                                 <a href="/login" className="border px-4 py-2 rounded-md text-gray-700 hover:text-gray-900">
@@ -33,8 +33,10 @@ function Hero() {
                 </div>
             </div>
         </nav>  
-
-            <div class="mx-auto mt-20 px-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 home">
+        <div>
+            
+        </div>
+            <div class="mx-auto  border px-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 home">
                 <div class="flex flex-col items-center justify-between lg:flex-row">
                 <div class="lg:max-w-lg lg:pr-5">
                     <div class="max-w-xl">
@@ -60,8 +62,8 @@ function Hero() {
                 </div>
                 </div>
             </div>
-            </div> 
 
+            </div> 
         </div>
     );
 

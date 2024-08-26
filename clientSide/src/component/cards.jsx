@@ -198,7 +198,7 @@ const handleClosePopup = () => {
 
 
   return (
-      <div className="p-4 relative">
+      <div className="p-4 relative max-w-[82%] mx-auto">
           <div className='flex justify-between items-center my-10 border rounded-md '>
             <h1 className="text-2xl m-2">Flashcards</h1>
             <button 
@@ -259,6 +259,7 @@ const handleClosePopup = () => {
                   <FlashCard 
                     text1={card.text1}
                     text2={card.text2} 
+                    description={card.description} 
                     handleEditCard={()=>handleEditCard(card)} 
                     handleDeleteCard={() => handleDeleteCard(card.id)}
                     image={card.image}
@@ -269,11 +270,11 @@ const handleClosePopup = () => {
           ))}
         </div>
 
-          <button 
+          {/* <button 
             className='px-2 py-2 my-6 bg-green-600 text-white font-medium rounded-md hover:bg-green-700'
             onClick={()=>handleOpenPopup()}>
               Add a New Card
-          </button>
+          </button> */}
           {/* adding cards */}
           {isPopupOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm">
@@ -311,8 +312,8 @@ const handleClosePopup = () => {
                       required
                     />
                   </div>
-
                   <div>
+                  <p className='text-gray-600'>Optional</p>
                     <label className="block text-sm font-medium text-gray-700">Image</label>
                     <input
                       type="file"
